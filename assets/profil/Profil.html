@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Riki RIFALDI</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            background-color: #0d1117;
+            color: #c9d1d9;
+            line-height: 1.6;
+        }
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(180deg, #0d1117 0%, #161b22 100%);
+            text-align: center;
+            padding: 20px;
+        }
+
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid #58a6ff;
+            margin-bottom: 20px;
+            transition: 0.4s;
+            object-fit: cover;
+        }
+
+        .profile-pic:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 20px #58a6ff;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: #f0f6fc;
+            margin-bottom: 10px;
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            color: #8b949e;
+            border-right: 2px solid #58a6ff;
+            white-space: nowrap;
+            overflow: hidden;
+            width: 0;
+            animation: typing 3s steps(30, end) forwards, blink 0.5s step-end infinite;
+        }
+
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+
+        @keyframes blink {
+            from, to { border-color: transparent }
+            50% { border-color: #58a6ff }
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        section {
+            margin-bottom: 60px;
+            animation: slideUp 1s ease;
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h2 {
+            color: #58a6ff;
+            border-bottom: 1px solid #30363d;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-badge {
+            background: #21262d;
+            border: 1px solid #30363d;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            transition: 0.3s;
+        }
+
+        .skill-badge:hover {
+            border-color: #58a6ff;
+            background: #30363d;
+        }
+
+        .project-card {
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 15px;
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            transform: scale(1.02);
+            border-color: #8b949e;
+        }
+
+        .nav-links {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .btn-home {
+            text-decoration: none;
+            color: #58a6ff;
+            font-weight: bold;
+            border: 1px solid #58a6ff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .btn-home:hover {
+            background: #58a6ff;
+            color: #ffffff;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            font-size: 0.8rem;
+            color: #8b949e;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="hero">
+        <img src="../../kyo.jpg" alt="Riki Rifaldi" class="profile-pic">
+        <h1>Riki RIFALDI</h1>
+        <div class="tagline">Siswa PPLG & Frontend Developer Enthusiast</div>
+    </div>
+
+    <div class="container">
+        <section id="about">
+            <h2>Tentang Saya</h2>
+            <p>Saya adalah seorang siswa yang sedang menekuni dunia pengembangan web. Fokus saya adalah menciptakan tampilan website yang bersih, menarik, dan mudah digunakan. Saya sangat menyukai tantangan baru dalam mempelajari teknologi Frontend.</p>
+        </section>
+
+        <section id="skills">
+            <h2>Keahlian Frontend</h2>
+            <div class="skill-list">
+                <div class="skill-badge">HTML5</div>
+                <div class="skill-badge">CSS3 Animation</div>
+                <div class="skill-badge">JavaScript Dasar</div>
+                <div class="skill-badge">Responsive Design</div>
+                <div class="skill-badge">UI Design</div>
+                <div class="skill-badge">Mobile First</div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Projek Saya</h2>
+            <div class="project-card">
+                <h3>Website Portofolio</h3>
+                <p>Membangun website pribadi menggunakan HTML dan CSS murni dengan transisi animasi smooth.</p>
+            </div>
+            <div class="project-card">
+                <h3>Katalog Data Siswa</h3>
+                <p>Membuat struktur tabel data yang rapi dan interaktif untuk keperluan sekolah.</p>
+            </div>
+        </section>
+
+        <div class="nav-links">
+            <a href="../../belajarweb.html" class="btn-home">Kembali ke Beranda</a>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2026 Riki RIFALDI 
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
